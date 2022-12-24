@@ -54,9 +54,10 @@ If everything is done as described above, you will be able to visualize in Real 
 The video below provides a brief overview of the project:
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=7jOH5gX1w9Q
 " target="_blank"><img src="http://img.youtube.com/vi/7jOH5gX1w9Q/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="1280" height="720" border="10" /></a>
+alt="IMAGE ALT TEXT HERE" width="1280" height="700" border="10" /></a>
 
 Thank you for your for taking the time to read this. We appreciate you! 
 
 Group 23
+
 AF/KW/MSS
