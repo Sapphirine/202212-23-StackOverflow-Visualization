@@ -28,6 +28,9 @@ If everything is run as described above, the "Python socket.ipynb" code will run
 
 ```Waiting for TCP connection...```
 
-This means that the socket is working correctly. Once the socket is working, we need to receive the data that the socket is ready to send. This is done using the other jupyter notebook file that - "PySpark Streaming.ipynb". Make sure to populate all variables prompting you to change them to their required values. You will need the your GCP Project ID, Cloud Storage bucket name, output dataset name and the output data table for the tags count data. Change the Port number if desired making sure that this needs to be changed on the socket side as well.
+This means that the socket is working correctly. Once the socket is working, we need to receive the data that the socket is ready to send. This is done using the other jupyter notebook file that - "PySpark Streaming.ipynb". Make sure to populate all variables prompting you to change them to their required values. You will need the your GCP Project ID, Cloud Storage bucket name, output dataset name and the output data table for the tags count data. Change the Port number if desired making sure that this needs to be changed on the socket side as well. Increase the streamtime once everything is working to continue gathering data.
 
-Once all the variables have been populated, run the script. After establishing a Spark
+Once all the variables have been populated, run the script. After establishing a Spark configuration, the script will proceed to connect to the socket, get the data that is sent from the socket, process it and then save it to its destination table and bucket.
+
+This completes the data capture part. The same needs to be done for the question quality prediction data.
+
