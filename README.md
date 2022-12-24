@@ -33,7 +33,7 @@ This means that the socket is working correctly. Once the socket is working, we 
 Once all the variables have been populated, run the script. After establishing a Spark configuration, the script will proceed to connect to the socket, get the data that is sent from the socket, process it and then save it to its destination table and bucket.
 
 This completes the data capture part. The same needs to be done for the question quality prediction data.
-To get the prediction on question quality, a trained model is needed. A keras model was trained and the results can be seen in the "Bi-LSTM" folder. The trained model weights are linked in the same folder as well. *Columbia University affiliates will have access to this file. Please let us know if you require access to the weights and we will try our best to help you out*
+To get the prediction on question quality, a trained model is needed. A keras model was trained and the results can be seen in the "Bi-LSTM" folder. The trained model weights are linked in the same folder as well. *Columbia University affiliates will have access to this file. Please let us know if you require access to the weights and we will try our best to help you out.* Add the trained model to the same directory as your jupyter notebook to load it.
 
 The next stage is the retrieval of this data to your local or virtual machine. This is achieved using the python scripts under "Data Retrieval from GBQ" folder.
 These scripts are fairly simple but once again require some setup.
