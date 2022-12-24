@@ -17,6 +17,6 @@ while True:
     print("Retrieving data from big query ......")
     results = query_job.to_dataframe() # Wait for the job to complete.
 
-    results.to_csv("tag_count.csv")
+    results.to_csv("bigquery_data.csv")
     print("Data saved to csv successfully! ")
     time.sleep(10)
