@@ -42,7 +42,21 @@ Firstly, you will need to get a Google BigQuery authentication key to be able to
 
 Once this is complete, run the python scripts under the "Data Retrieval from GBQ" folder. This will get the data from GBQ and save it locally as ".csv" files. The current configuration in the script saves the files as "bigquery_data.csv" and "pred.csv" for the two scripts respectively. The script runs until interrupted. Example ".csv" files have also been added to the same folder in Github to confirm the data you are seeing is consistent with our intentions.
 
+After the data is being captured, all that is left to do is to point the javascript files under the "Visualizations" folder to the path to your file. This will need to be changed at every d3.csv function as shown below:
 
+```javascript
+d3.csv("/path/to/file/.csv", function(error, data) {
+  if (error) throw error;
+```
+
+If everything is done as described above, you will be able to visualize in Real Time the tags and the question quality of every question being asked on StackOverflow. To restart your project, simple clear your tables in Google BigQuery and restart all scripts.
+
+The video below provides a brief overview of the project:
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=7jOH5gX1w9Q
 " target="_blank"><img src="http://img.youtube.com/vi/7jOH5gX1w9Q/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+alt="IMAGE ALT TEXT HERE" width="1920" height="1080" border="10" /></a>
+
+Thank you for your for taking the time to read this. We appreciate you! 
+
+Group 23
+AF/KW/MSS
