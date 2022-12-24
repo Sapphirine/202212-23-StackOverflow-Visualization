@@ -21,4 +21,4 @@ Once the tables and cluster have been set up as described, navigate to the code 
 
 *To run the code over a longer period of time (or for more than 300 requests per day), an app/dev account must be registered with Stack Exchange API - if this step is skipped, remove the key parameter in the following code line:*
 ```python
-SITE = StackAPI('stackoverflow', key='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')```
+SITE = StackAPI('stackoverflow', key='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') ```
