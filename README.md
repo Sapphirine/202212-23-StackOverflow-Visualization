@@ -38,7 +38,12 @@ To get the prediction on question quality, a trained model is needed. A keras mo
 The next stage is the retrieval of this data to your local or virtual machine. This is achieved using the python scripts under "Data Retrieval from GBQ" folder.
 These scripts are fairly simple but once again require some setup.
 
-Firstly, you will need to get a Google BigQuery authentication key to be able to access the data. This can be done by following the first 5 steps at this [link](https://codelabs.developers.google.com/codelabs/cloud-bigquery-nodejs?fbclid=IwAR0yvS46R5eLX2E2Epyx8Tm9FOFfEEJQsezp9ihuuwBSEHA6VypSCCJYQJ4#3) which describes how to make IAM access using a service account. Once you have a "key.json" file, you will need it to access the data. Make sure to go into GCP IAM and change the Service Account roles to be **atleast** Admin for BigQuery and Viewer for Project. Without this, you will not be able to access the data.
+Firstly, you will need to get a Google BigQuery authentication key to be able to access the data. This can be done by following the first 5 steps at this [link](https://codelabs.developers.google.com/codelabs/cloud-bigquery-nodejs?fbclid=IwAR0yvS46R5eLX2E2Epyx8Tm9FOFfEEJQsezp9ihuuwBSEHA6VypSCCJYQJ4#3) which describes how to make IAM access using a service account. Once you have a "key.json" file, you will need it to access the data. Make sure to go into GCP IAM and change the Service Account roles to be **atleast** Admin for BigQuery and Viewer for Project. Without this, you will not be able to access the data. Add the path to your "key.json" file in the python script files in the line shown below:
+
+```python
+credentials = service_account.Credentials.from_service_account_file('/path/to/json/for/GCPBigQueryAccess')
+project_id = 'project-name-in-gcp'
+```
 
 Once this is complete, run the python scripts under the "Data Retrieval from GBQ" folder. This will get the data from GBQ and save it locally as ".csv" files. The current configuration in the script saves the files as "bigquery_data.csv" and "pred.csv" for the two scripts respectively. The script runs until interrupted. Example ".csv" files have also been added to the same folder in Github to confirm the data you are seeing is consistent with our intentions.
 
