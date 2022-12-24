@@ -15,7 +15,7 @@ The overall process requires two steps:
 
 This example will go though the tag count data retrieval since the process for the title predictions data retrieval is also the same.
 
-Once the tables and cluster have been set up as described, navigate to the code PySpark Socket and Receiver for tags folder and upload the two files to the jupyter notebook on the Dataproc cluster. The PySpark Socket file is responsible for fetching the data from StackOverflow every 10 seconds. Make sure you run the command below before running the "Python socket.ipynb" code. It has been included as the first cell for convenience.
+Once the tables and cluster have been set up as described, navigate to the code PySpark Socket and Receiver for tags folder and upload the two files to the jupyter notebook on the Dataproc cluster. The PySpark Socket file is responsible for fetching the data from StackOverflow every 10 seconds. Make sure you run the command below before running the "Python socket.ipynb" file. It has been included as the first cell for convenience.
 
 ```!pip install stackapi```
 
@@ -23,3 +23,11 @@ Once the tables and cluster have been set up as described, navigate to the code 
 ```python
 SITE = StackAPI('stackoverflow', key='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 ```
+
+If everything is run as described above, the "Python socket.ipynb" code will run and print:
+
+```Waiting for TCP connection...```
+
+This means that the socket is working correctly. Once the socket is working, we need to receive the data that the socket is ready to send. This is done using the other jupyter notebook file that - "PySpark Streaming.ipynb". Make sure to populate all variables prompting you to change them to their required values. You will need the your GCP Project ID, Cloud Storage bucket name, output dataset name and the output data table for the tags count data. Change the Port number if desired making sure that this needs to be changed on the socket side as well.
+
+Once all the variables have been populated, run the script. After establishing a Spark
