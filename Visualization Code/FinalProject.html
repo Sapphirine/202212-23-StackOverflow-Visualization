@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Packing Bubble Chart</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+
+</head>
+<body>
+    <h1 >Section I</h1>
+<h2> Bubble chart visualization</h2>
+<br/>
+
+    <div id="dataviz"></div>
+   
+    <script src="bubblechart.js"></script>
+
+    <h1 >Section II</h1>
+    <h2> Question Quality Prediction</h2>
+<br/>
+
+    <div id="dataviz2"></div>
+   
+    <script src="barchartrace.js"></script>
+
+
+
+    <h1 >Section III</h1>
+    <h2> Question Quality Prediction</h2>
+
+    <div class="container">
+        <div class="children">
+            <h3>Piechart for question quality prediction: </h3>
+            <div id="piechart_my" style = "display: flex; justify-content: center;"></div>
+            <!-- <p style = "padding-right:30px;"><i>Some notes about the pie chart:
+            </i></p> -->
+        </div>
+        <div class="children">
+            <h3>Table for question quality prediction: </h3>
+            <table id="html_table_count" style = "display: flex; justify-content: center; padding-bottom: 30px;"></table>
+            
+        </div>
+        <div class="children">
+            <h3>Table for title and prediction: </h3>
+            <table id="html_table_title" style = "display: flex; justify-content: center; padding-top: 30px;"></table>
+        </div>
+      </div>
+
+      <script src="piechart_pred.js"></script>
+
+
+    
+</body>
+</html>
+<script src="https://d3js.org/d3.v4.js"></script>
+
+
+<style>
+    h1, h2 {  
+        text-align:center;
+        font-family:georgia,garamond,serif;
+    }
+    h3{
+        padding-left:30px;
+    }
+    p {
+        padding-left:30px;
+        font-size:16px;
+        font-family:georgia,garamond,serif;
+    }
+    #try_color {
+        color:blue
+    }
+    .flex-container {
+        display: flex;
+        padding-left:30px;
+        padding-right:30px;
+    }
+    .flex-child {
+        flex: 1;
+        border: 1px solid black;
+    }  
+    .flex-child:first-child {
+        margin-right: 20px;
+    }
+    
+    #html_table {
+        border-collapse: collapse;
+        padding-left:30px;
+    }
+      #html_table1, #html_table2 {
+        border-collapse: collapse;
+        padding-left:30px;
+      }
+      #html_table3 {
+        border-collapse: collapse;
+        padding-left:30px;
+      }
+      #html_table4 {
+        border-collapse: collapse;
+        padding-left:30px;
+      }
+      #html_table5 {
+        border-collapse: collapse;
+        padding-left:30px;
+      }
+
+      #html_table6 {
+        border-collapse: collapse;
+        padding-left:30px;
+      }
+      #html_table tr:nth-child(odd) {
+        background: #f2f2f2;
+      }
+      #html_table1 tr:nth-child(odd) {
+        background: #f2f2f2;
+      }
+      #html_table2 tr:nth-child(odd) {
+        background: #f2f2f2;
+      }
+      #html_table3 tr:nth-child(odd) {
+        background: #f2f2f2;
+      }
+      #html_table4 tr:nth-child(odd) {
+        background: #f2f2f2;
+      }
+      #html_table5 tr:nth-child(odd) {
+        background: #f2f2f2;
+      }
+      #html_table6 tr:nth-child(odd) {
+        background: #f2f2f2;
+      }
+      #html_table, #html_table1, #html_table2, td {
+
+        padding: 10px;
+      } 
+      #html_table3 td {
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      #html_table4 td {
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      #html_table5 td {
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      #html_table6 td {
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+
+      .container {
+        height: 250vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .children {
+        width: calc(50% - 10px);
+        margin: 5px;
+        background: #D8D8D8;
+        flex: 1;
+      }
+      .children:first-child {
+        flex: 0 0 calc(100% - 10px);
+      }
+      
+      text{
+      font-size: 16px;
+      font-family: Open Sans, sans-serif;
+      }
+      
+      text.title{
+        font-size: 24px;
+        font-weight: 500;
+      }
+      text.subTitle{
+        font-weight: 500;
+        fill: #777777;
+      }
+      text.caption{
+        font-weight: 400;
+        font-size: 14px;
+        fill: #777777;
+      }
+      text.label{
+        font-weight: 600;
+      }
+    
+      text.countLabel{
+       font-weight: 300;
+      }
+    
+      text.dateTimeText{
+        font-size: 64px;
+        font-weight: 700;
+        opacity: 0.25;
+      }
+      .tick text {
+        fill: #777777;
+      }
+      .xAxis .tick:nth-child(2) text {
+        text-anchor: start;
+      }
+      .tick line {
+        shape-rendering: CrispEdges;
+        stroke: #dddddd;
+      }
+      .tick line.origin{
+        stroke: #aaaaaa;
+      }
+
+      path.domain{
+        display: none;
+      }
+</style>
