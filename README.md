@@ -33,4 +33,16 @@ This means that the socket is working correctly. Once the socket is working, we 
 Once all the variables have been populated, run the script. After establishing a Spark configuration, the script will proceed to connect to the socket, get the data that is sent from the socket, process it and then save it to its destination table and bucket.
 
 This completes the data capture part. The same needs to be done for the question quality prediction data.
+To get the prediction on question quality, a trained model is needed. A keras model was trained and the results can be seen in the "Bi-LSTM" folder. The trained model weights are linked in the same folder as well. *Columbia University affiliates will have access to this file. Please let us know if you require access to the weights and we will try our best to help you out*
 
+The next stage is the retrieval of this data to your local or virtual machine. This is achieved using the python scripts under "Data Retrieval from GBQ" folder.
+These scripts are fairly simple but once again require some setup.
+
+Firstly, you will need to get a Google BigQuery authentication key to be able to access the data. This can be done by following the first 5 steps at this [link](https://codelabs.developers.google.com/codelabs/cloud-bigquery-nodejs?fbclid=IwAR0yvS46R5eLX2E2Epyx8Tm9FOFfEEJQsezp9ihuuwBSEHA6VypSCCJYQJ4#3) which describes how to make IAM access using a service account. Once you have a "key.json" file, you will need it to access the data. Make sure to go into GCP IAM and change the Service Account roles to be **atleast** Admin for BigQuery and Viewer for Project. Without this, you will not be able to access the data.
+
+Once this is complete, run the python scripts under the "Data Retrieval from GBQ" folder. This will get the data from GBQ and save it locally as ".csv" files. The current configuration in the script saves the files as "bigquery_data.csv" and "pred.csv" for the two scripts respectively. The script runs until interrupted. Example ".csv" files have also been added to the same folder in Github to confirm the data you are seeing is consistent with our intentions.
+
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=7jOH5gX1w9Q
+" target="_blank"><img src="http://img.youtube.com/vi/7jOH5gX1w9Q/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
