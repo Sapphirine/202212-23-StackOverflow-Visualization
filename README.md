@@ -18,6 +18,7 @@ This example will go though the tag count data retrieval since the process for t
 Once the tables and cluster have been set up as described, navigate to the code PySpark Socket and Receiver for tags folder and upload the two files to the jupyter notebook on the Dataproc cluster. The PySpark Socket file is responsible for fetching the data from StackOverflow every 10 seconds. Make sure you run the command below before running the "Python socket.ipynb" code. It has been included as the first cell for convenience.
 
 ```!pip install stackapi```
+
 *To run the code over a longer period of time (or for more than 300 requests per day), an app/dev account must be registered with Stack Exchange API - if this step is skipped, remove the key parameter in the following code line:*
 ```python
 SITE = StackAPI('stackoverflow', key='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')```
